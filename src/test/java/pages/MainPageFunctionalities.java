@@ -19,4 +19,16 @@ public class MainPageFunctionalities {
     @FindBy(xpath = "(//h2)[3]")
     public WebElement signupText;
 
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement nameBox;
+
+    @FindBy(xpath = "(//input[@name='email'])[2]")
+    public WebElement emailBox;
+
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement singUpButton2;
+
+
+
+
 }
