@@ -1,11 +1,11 @@
-@register_using
+@register_user
 Feature: Register_User_Functionality
 
   Scenario: TC01_register_user
     When user launches the browser
     And user navigates to home page
     Then user verifies home page is visible
-    Then user clicks on signup button
+    Then user clicks signup_login button
     Then user verifies new user signup is visible
 
     Scenario: TC01_signup_user
@@ -17,12 +17,13 @@ Feature: Register_User_Functionality
       And user selects checkbox receive special offers
       And user fills details2
       And user clicks create account button
-      Then user verifies that acount is created
+     Then user verifies that acount is created
+
 
       Scenario: TC01_delete_account
         When user clicks continue button
         And user verifies that logged in
-        And user clicks delete account button
+        Then user clicks delete account button
         Then user verifies that acount deleted
 
 

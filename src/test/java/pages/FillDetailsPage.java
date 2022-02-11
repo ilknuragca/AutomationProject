@@ -3,74 +3,67 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import stepdefinitions.RegisterUserStepDefs;
 import utilities.Driver;
 
 public class FillDetailsPage {
-   public FillDetailsPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
 
+    public FillDetailsPage() {
+
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//*[text()='Enter Account Information']") // //b[contains(text(),'Enter Account Information')]
-    public WebElement enterAccountText;
+    @FindBy(id= "uniform-id_gender1")
+    public WebElement genderBox;
 
-    @FindBy(id="id_gender1")
-    public WebElement radiogender;
-
-    @FindBy(id="password")
-    public WebElement passwordBox;
+    @FindBy(id= "password")
+    public WebElement passwodBox;
 
     @FindBy(id="days")
-    public WebElement daysDropDown;
+    public WebElement dayDropdown;
 
     @FindBy(id="months")
-    public WebElement monthsDropDown;
+    public WebElement monthDropdown;
 
     @FindBy(id="years")
-    public WebElement yearsDropDown;
+    public WebElement yearDropdown;
 
-    @FindBy(id="newsletter")
-    public WebElement  newsletterCheckBox;
+    @FindBy(xpath = "//*[@id='newsletter']")
+    public WebElement newsletterSignupBox;
 
     @FindBy(id="optin")
-    public WebElement  optinCheckBox;
+    public WebElement specialOfferBox;
 
     @FindBy(id="first_name")
-    public WebElement  firstNameBox;
+    public WebElement firstNameBox;
 
     @FindBy(id="last_name")
-    public WebElement  lastNameBox;
+    public WebElement lastNameBox;
 
-    @FindBy(id="company")
-    public WebElement  companyNameBox;
+    @FindBy(id= "company")
+    public WebElement companyBox;
 
     @FindBy(id="address1")
-    public WebElement  address1NameBox;
-
-    @FindBy(id="address2")
-    public WebElement  address2NameBox;
+    public WebElement addressBox;
 
     @FindBy(id="country")
-    public WebElement countryDropDownBox;
+    public WebElement countryDropdown;
 
     @FindBy(id="state")
-    public WebElement  stateBox;
+    public WebElement stateBox;
 
     @FindBy(id="city")
-    public WebElement  cityBox;
+    public WebElement cityBox;
 
     @FindBy(id="zipcode")
-    public WebElement  zipcodeBox;
+    public WebElement zipcodeBox;
 
     @FindBy(id="mobile_number")
-    public WebElement  mobilenumberBox;
+    public WebElement mobileNumberBox;
 
-    @FindBy(xpath = "//*[text()='Create Account']")
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
     public WebElement createAccountButton;
 
-    @FindBy(xpath = "(//h2)[1]")
-    public WebElement accountCreateText;
-
+    @FindBy(xpath = "//*[text()='Account Created!']")
+    public WebElement accountCreatedText;
 
 }

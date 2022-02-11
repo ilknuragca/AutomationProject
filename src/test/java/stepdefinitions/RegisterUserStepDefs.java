@@ -1,11 +1,9 @@
 package stepdefinitions;
 
-import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.Select;
-import pages.FillDetailsPage;
 import pages.MainPageFunctionalities;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -13,10 +11,6 @@ import utilities.Driver;
 public class RegisterUserStepDefs {
 
     MainPageFunctionalities mainPageFunctionalities= new MainPageFunctionalities();
-    FillDetailsPage fillDetailsPage =new FillDetailsPage();
-    Select select;
-    static String firstnameString=Faker.instance().name().firstName();
-    static String lastnameString=Faker.instance().name().lastName();
 
     @When("user launches the browser")
     public void user_launches_the_browser() {
@@ -36,8 +30,8 @@ public class RegisterUserStepDefs {
         Assert.assertEquals("Automation Exercise", homePageTitle);
 
     }
-    @Then("user clicks on signup button")
-    public void user_clicks_on_signup_button() {
+    @Then("user clicks signup_login button")
+    public void user_clicks_on_signup_login_button() {
 
         mainPageFunctionalities.signupButton.click();
 
@@ -46,21 +40,28 @@ public class RegisterUserStepDefs {
     public void user_verifies_new_user_signup_is_visible() {
 
         Assert.assertTrue(mainPageFunctionalities.signupText.isDisplayed());
+
     }
 
     @When("user enters name and email")
     public void user_enters_name_and_email() {
-           mainPageFunctionalities.nameBox.sendKeys(firstnameString+" "+lastnameString);
-           mainPageFunctionalities.emailBox.sendKeys(Faker.instance().internet().emailAddress());
+
+        mainPageFunctionalities.nameBox.sendKeys("iko");
+        mainPageFunctionalities.emailBox.sendKeys("iko@gmail.com");
 
     }
-    @When("user clicks signup button")
-    public void user_clicks_signup_button() {
-       mainPageFunctionalities.singUpButton2.click();
+
+    @And("user clicks signup button")
+    public void userClicksSignupButton() {
+        mainPageFunctionalities.accountCreatSignupButton.click();
     }
+
     @When("user verifies that enter account information is visible")
     public void user_verifies_that_enter_account_information_is_visible() {
-      Assert.assertTrue(fillDetailsPage.enterAccountText.isDisplayed());
+
+      Assert.assertTrue(mainPageFunctionalities.createAccountPageVerification.isDisplayed());
     }
+
+
 
 }
