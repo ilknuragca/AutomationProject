@@ -35,4 +35,6 @@ public class MainPageFunctionalities {
     public WebElement createAccountPageVerification;
 
 
+    @FindBy(xpath = "(//p)[1]")
+    public WebElement existingEmailVerification;
 }

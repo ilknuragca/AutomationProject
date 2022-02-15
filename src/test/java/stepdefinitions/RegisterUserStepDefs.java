@@ -63,5 +63,9 @@ public class RegisterUserStepDefs {
     }
 
 
-
+    @Then("user verifies email address is visible")
+    public void userVerifiesEmailAddressIsVisible() {
+        System.out.println(mainPageFunctionalities.existingEmailVerification.getText());
+         Assert.assertTrue(mainPageFunctionalities.existingEmailVerification.isDisplayed());
+    }
 }
