@@ -43,4 +43,19 @@ public class ProductsPage {
 
     @FindBy (xpath = "//b[contains(text(),'Brand')]")
     public WebElement Brand;
+
+    @FindBy(xpath = "(//*[@class='fa fa-plus-square'])[1]")
+    public WebElement viewProductHomePage;
+
+    @FindBy(id="quantity")
+    public WebElement quantityBox;
+
+    @FindBy(xpath = "//*[@type='button']")
+    public WebElement addToCartProduct;
+
+    @FindBy(linkText = "View Cart")
+    public WebElement viewCartButtonProduct;
+
+    @FindBy(xpath = "//*[@class='disabled']")
+    public WebElement quantityBoxInCart;
 }
