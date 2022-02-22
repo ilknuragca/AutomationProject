@@ -18,12 +18,12 @@ import org.junit.runner.RunWith;
 
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@login_user_correct",
+        tags = "@remove_product",
         //tags="@register_user",
         //tags="@login_user_excel",
         //tags="@login_user_excel_negative",
        // tags="@verify_subscription_in_cart_page",
-        dryRun = false
+        dryRun = true
 )
 
 public class Runner {

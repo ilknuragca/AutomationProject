@@ -24,7 +24,7 @@ public class SubscriptionHomepageStepDefs {
     @When("user enters email address in input and clicks arrow button")
     public void user_enters_email_address_in_input_and_clicks_arrow_button() {
 
-        subscriptionPage.susbscribeEmail.sendKeys("ozkan@gmail.com");
+        subscriptionPage.susbscribeEmail.sendKeys("iko@gmail.com");
         subscriptionPage.susbscribeArrowButton.click();
     }
     @When("verify successfully subscribed message is visible")
