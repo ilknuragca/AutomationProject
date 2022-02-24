@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@remove_product",
+        tags = "@search_products2",
         //tags="@register_user",
         //tags="@login_user_excel",
         //tags="@login_user_excel_negative",

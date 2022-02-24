@@ -14,8 +14,7 @@ public class ViewCategoryProductsStepDefs {
     public void verify_categories_are_visible_on_left_sidebar() throws InterruptedException {
 
         Assert.assertTrue(viewCategoryProductsPage.categoryText.isDisplayed());
-        //Thread.sleep(3000);
-        //Assert.assertEquals(3, viewCategoryPoductsPage.categories.size());
+
 
     }
     @Given("user clicks category")

@@ -15,6 +15,8 @@ public class ReusableMethods {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
-
+    public static void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
 
 }
