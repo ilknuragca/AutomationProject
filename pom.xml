@@ -14,6 +14,7 @@
     </properties>
 
     <dependencies>
+
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
@@ -65,18 +66,18 @@
         <scope>test</scope>
     </dependency>
 
-<!--    <dependency>-->
-<!--        <groupId>org.postgresql</groupId>-->
-<!--        <artifactId>postgresql</artifactId>-->
-<!--        <version>42.2.8</version>-->
-<!--    </dependency>-->
+   <dependency>
+        <groupId>org.postgresql</groupId>
+       <artifactId>postgresql</artifactId>
+        <version>42.2.8</version>
+    </dependency>
 
-<!--    &lt;!&ndash;        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;&ndash;&gt;-->
-<!--    <dependency>-->
-<!--        <groupId>tech.grasshopper</groupId>-->
-<!--        <artifactId>extentreports-cucumber7-adapter</artifactId>-->
-<!--        <version>1.2.0</version>-->
-<!--    </dependency>-->
+   <dependency>
+        <groupId>tech.grasshopper</groupId>
+        <artifactId>extentreports-cucumber7-adapter</artifactId>
+        <version>1.2.0</version>
+   </dependency>
+
     </dependencies>
 
 </project>
